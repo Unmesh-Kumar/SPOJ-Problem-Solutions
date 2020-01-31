@@ -58,65 +58,6 @@ inline ll maxim(ll a,ll b) {if(a>b) return a; else return b;}
 inline ll minim(ll a,ll b) {if(a<b) return a; else return b;}
 inline bool equals(double a, double b){ return fabs(a - b) < 1e-9; }
 ll gcd(ll a, ll b){ return b==0 ? a : gcd(b, a%b); }
-ll modpow(ll b, ll e)
-{
-  ll ans=1;
-  for(;e;b=b*b%mod,e/=2)
-  if(e&1) ans=ans*b%mod;
-  return ans;
-}
-/*
-ll ncr(ll n,ll r)
-{
-  if(r>n) return 0;
-  if((n==r)||(r==0))
-  {
-    return 1;
-  }
-  if(r==1) return n;
-  if(r>n-r)
-  {
-    r=n-r;
-  }
-
-  string key=to_string(n)+"|"+to_string(r);
-  if(m.find(key)==m.end())
-  {
-    ll answer=ncr(n-1,r-1)+ncr(n-1,r);
-    m[key]=answer;
-  }
-  //cout<<key<<" "<<m[key]<<endl;
-  return m[key];
-}
-*/
-/**
-int modInverse(int a, int m)
-{
-    int m0 = m;
-    int y = 0, x = 1;
-    if (m == 1)
-      return 0;
-    while (a > 1)
-    {
-        // q is quotient
-        int q = a / m;
-        int t = m;
-        // m is remainder now, process same as
-        // Euclid's algo
-        m = a % m, a = t;
-        t = y;
-        // Update y and x
-        y = x - q * y;
-        x = t;
-    }
-    // Make x positive
-    if (x < 0)
-       x += m0;
-    return x;
-}
-**/
-
-
 
 map<ll,ll> x;
 ll pow_of_3(ll n)
