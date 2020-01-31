@@ -92,15 +92,15 @@ int main()
     if(n==1) cout<<1<<endl;
     else
     {
-      ll c = n%3;
-      ll n1;
-  		if(c==2) n1 = (n-2)/3;
-  		else if(c==1) n1 = (n-4)/3;
-  		else n1 = n/3;
-  		ll ans = pow_of_3(n1);
-  		if(n%3==2) ans = (ans*2)%mod;
-  		else if(n%3==1)  ans = (ans*4)%mod;
-      cout<<ans<<endl;
+	    ll c = n%3;
+	    ll n1;
+	    if(c==2) n1 = (n-2)/3;
+	    else if(c==1) n1 = (n-4)/3;
+	    else n1 = n/3;
+	    ll ans = pow_of_3(n1);
+	    if(n%3==2) ans = (ans*2)%mod;
+	    else if(n%3==1)  ans = (ans*4)%mod;
+	    cout<<ans<<endl;
     }
   }
   return 0;
